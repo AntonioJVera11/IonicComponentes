@@ -9,9 +9,9 @@ import { map }  from  'rxjs/operators';
 })
 export class HomePage {
 
-  users: any;
+  cards: any;
 
   constructor(private httpClient: HttpClient) {
-    this.users = this.httpClient.get('https://randomuser.me/api/?results=20').pipe(map(res => res['results']));
+    this.cards = this.httpClient.get('https://api.myjson.com/bins/1cbpkk').pipe(map(res => res['results']));
   }
 }

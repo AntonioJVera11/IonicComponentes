@@ -1,7 +1,7 @@
-<ion-header>
+<ion-header id="cabecera">
   <ion-toolbar>
     <ion-title>
-      Componentes de PC
+      Tarjetas de crédito
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,15 +9,25 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let user of users | async" size-xs="12" size-sm="6" size-md="4" size-lg="3" size-xl="2">
+      <ion-col *ngFor="let card of cards | async" size-xs="12" size-sm="6" size-md="4" size-lg="3" size-xl="2">
         <ion-card>
-          <ion-item>
+          <ion-item class = "tipotarjeta">
             <ion-avatar item-start>
-              <img [src]="user.picture.medium">
             </ion-avatar>
-            <h2>{{ user.name.first }}  {{ user.name.last }}</h2>
+            <h2>{{ card.card_type }}</h2>&nbsp;&nbsp;&nbsp;<ion-icon name="logo-bitcoin"></ion-icon>
           </ion-item>
           <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-label><ion-icon name="cash"></ion-icon>&nbsp;<b>Moneda: </b> {{ card.card_currency }}</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label><ion-icon name="barcode"></ion-icon>&nbsp;<b>Código: </b> {{ card.card_currency_code }}</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label><ion-icon name="card"></ion-icon>&nbsp;<b>#: </b> {{ card.card_number }}</ion-label>
+              </ion-item>
+            </ion-list>
           </ion-card-content>
         </ion-card>
       </ion-col>
