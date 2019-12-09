@@ -1,14 +1,44 @@
 @media (orientation: landscape) {
-   
-    #cabecera{
-        visibility: hidden;
+
+    #cabecera {
+        visibility: collapse;
     }
-    
+
+    #fondopantalla {
+        background-color: #00eaff;
+    }
+
+}
+
+@media (max-width: 1600px) {
+    ion-item {
+        --ion-background-color: #838383;
+        text-align: center;
+        color: #fff;
+    }
+
+    ion-content {
+        --ion-background-color: #8ae4c6;
+    }
+
+    ion-card-content {
+        background-color: white;
+        color: #fff;
+    }
+
+    ion-title {
+        --ion-background-color: #fff;
+        font-family: "Bahnschrift";
+        --ion-font-size: 20px;
+        color: #000;
+        text-align: center;
+    }
+
 }
 
 ion-toolbar {
     color: white;
-    --ion-background-color: #126427 ;
+    --ion-background-color: #126427;
 }
 
 ion-grid {
